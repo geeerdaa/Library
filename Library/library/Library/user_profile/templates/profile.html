@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Profile</title>
+<body>
+<div class="header-bar">
+<h1>Profile</h1>
+
+
+</div>
+<div class="card-body">
+    <nobr>
+    {% if user.profile_pic %}
+        <img src="{{ profile.profile_pic.url }}" height=100 width=100><br><br>
+    {% else %}
+        {% load static %}
+        <img src="/media/images/i.jpeg" height=100 width=100><br><br>
+    {% endif %}
+    </nobr>
+    <h4>{{ user }}</h4>
+</div>
+</body>
+{% endblock %}

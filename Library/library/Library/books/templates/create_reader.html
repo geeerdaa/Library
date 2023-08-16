@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Creating readers</h1>
+    <form action="" method="GET">
+        {%csrf_token%}
+        last name: <input type="text" name="last_name"/><br/>
+        first name:  <input type="text" name="first_name"/><br/>
+        middle name: <input type="text" name="middle_name"/><br/>
+        <br>
+        <input type="submit" value="Post"/>
+    </form>  
+        <br>
+{% endblock %}

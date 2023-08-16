@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Creating books</h1>
+            <form action="" method="GET">
+            {%csrf_token%}
+            Title:  <input type="text" name="title"/><br/>
+            Author: <input type="text" name="author"/><br/>
+            <br>
+            <input type="submit" value="Post"/>
+        </form>   
+    
+{% endblock %}

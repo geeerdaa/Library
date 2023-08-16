@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <select>
+            <option value="readers">{{post.last_name}} {{post.first_name}} {{post.middle_name}}</option>
+        </select>
+    <h1>Список книг</h1>
+<ul>
+    {% for book in books %}
+        <li>{{book.id}} - {{ book.title }} - {{ book.author }} - {{book.publication_date}}</li>
+    {% empty %}
+        <li>Нет доступных книг.</li>
+    {% endfor %}
+</ul>   
+<a class="container" href="{% url 'my_book' %}"> My book </a> 
+
+{% endblock %}
